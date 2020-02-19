@@ -15,6 +15,7 @@ class MapViewController: UIViewController {
     var place = Place()
     let annotaionIdentifier = "annotaionIdentifier"
     let locationManager = CLLocationManager()
+    let regionInMeters = 10_000.00
 
     @IBOutlet weak var mapView: MKMapView!
     
@@ -27,6 +28,15 @@ class MapViewController: UIViewController {
     }
     
     
+    
+    @IBAction func centerViewInUserLocation() {
+        if let location = locationManager.location?.coordinate {
+            let region = MKCoordinateRegion(center: location,
+                                            latitudinalMeters: regionInMeters,
+                                            longitudinalMeters: regionInMeters)
+            mapView.setRegion(region, animated: true)
+        }
+    }
     
     @IBAction func closeVC() {
         dismiss(animated: true, completion: nil)
@@ -65,7 +75,12 @@ class MapViewController: UIViewController {
             setupLocationManager()
             checkLocationAuthorization()
         } else {
-            // Show alert controller
+            // Можно вызвать checkLocationServices() из viewDidAppear
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showAlert(title: "Your Location is not Available",
+                               message: "To give permission go to: Settings -> Privacy -> Location Services and turn On"
+                )
+            }
         }
     }
     
@@ -80,7 +95,12 @@ class MapViewController: UIViewController {
             mapView.showsUserLocation = true
             break
         case .denied:
-            // Show alert controller
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showAlert(title: "Your Location is not Available",
+                               message: "To give permission go to: Setting -> MyPlaces -> Location"
+                )
+            }
             break
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
@@ -93,6 +113,13 @@ class MapViewController: UIViewController {
         }
     }
     
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 extension MapViewController: MKMapViewDelegate {

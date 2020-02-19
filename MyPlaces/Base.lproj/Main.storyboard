@@ -27,7 +27,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="nm9-Ee-Egb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250.00000000000006"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTP-tb-6t2">
                                                     <rect key="frame" x="344" y="189" width="50" height="50"/>
@@ -229,6 +229,17 @@
                                     <action selector="closeVC" destination="HhM-5o-hkF" eventType="touchUpInside" id="zf0-Cb-qZw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAy-eS-hpE">
+                                <rect key="frame" x="324" y="806" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="50J-5f-4qZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="LTm-On-DlF"/>
+                                </constraints>
+                                <state key="normal" image="Location"/>
+                                <connections>
+                                    <action selector="centerViewInUserLocation" destination="HhM-5o-hkF" eventType="touchUpInside" id="Pud-GJ-Fyj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -237,7 +248,9 @@
                             <constraint firstItem="l5d-cH-DlG" firstAttribute="leading" secondItem="HFJ-Tg-hP6" secondAttribute="leading" id="L5F-Je-nKW"/>
                             <constraint firstItem="h8A-q1-8Ab" firstAttribute="top" secondItem="HFJ-Tg-hP6" secondAttribute="top" constant="40" id="MPm-kD-XRX"/>
                             <constraint firstAttribute="bottom" secondItem="l5d-cH-DlG" secondAttribute="bottom" id="Pa7-Rg-Dy4"/>
+                            <constraint firstAttribute="bottom" secondItem="ZAy-eS-hpE" secondAttribute="bottom" constant="40" id="nQF-SE-dv2"/>
                             <constraint firstItem="l5d-cH-DlG" firstAttribute="trailing" secondItem="HFJ-Tg-hP6" secondAttribute="trailing" id="tE8-Yu-FlE"/>
+                            <constraint firstItem="HFJ-Tg-hP6" firstAttribute="trailing" secondItem="ZAy-eS-hpE" secondAttribute="trailing" constant="40" id="vVV-0u-Mdg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HFJ-Tg-hP6"/>
                     </view>
@@ -417,6 +430,7 @@
     </scenes>
     <resources>
         <image name="AZ" width="25" height="24"/>
+        <image name="Location" width="128" height="128"/>
         <image name="Photo" width="195" height="196"/>
         <image name="cancel" width="128" height="128"/>
         <image name="map" width="50" height="50"/>
