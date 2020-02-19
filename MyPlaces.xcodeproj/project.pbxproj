@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		80B4F773579B626231B30324 /* Pods_MyPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC998ECA647204272BDAA6A /* Pods_MyPlaces.framework */; };
+		A23C929E23FD399C007C3B37 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23C929D23FD399C007C3B37 /* RatingControl.swift */; };
 		A299084423F7FEFE00972C44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A299084323F7FEFE00972C44 /* AppDelegate.swift */; };
 		A299084623F7FEFE00972C44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A299084523F7FEFE00972C44 /* SceneDelegate.swift */; };
 		A299084B23F7FEFE00972C44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A299084923F7FEFE00972C44 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		15BE30D1E379388F0D71259E /* Pods-MyPlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.release.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.release.xcconfig"; sourceTree = "<group>"; };
 		752A323AB99487B12A151F8C /* Pods-MyPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.debug.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.debug.xcconfig"; sourceTree = "<group>"; };
+		A23C929D23FD399C007C3B37 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		A299084023F7FEFE00972C44 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A299084323F7FEFE00972C44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A299084523F7FEFE00972C44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				A299085723F8035200972C44 /* MainViewController.swift */,
 				A299085D23F842AA00972C44 /* NewPlaceViewController.swift */,
 				A299085923F81DD100972C44 /* CustomTableViewCell.swift */,
+				A23C929D23FD399C007C3B37 /* RatingControl.swift */,
 				A299084923F7FEFE00972C44 /* Main.storyboard */,
 				A299084C23F7FF0000972C44 /* Assets.xcassets */,
 				A299084E23F7FF0000972C44 /* LaunchScreen.storyboard */,
@@ -222,6 +225,7 @@
 				A299085E23F842AA00972C44 /* NewPlaceViewController.swift in Sources */,
 				A299084423F7FEFE00972C44 /* AppDelegate.swift in Sources */,
 				A299086023F88C1F00972C44 /* StorageManager.swift in Sources */,
+				A23C929E23FD399C007C3B37 /* RatingControl.swift in Sources */,
 				A299085C23F82A0000972C44 /* PlaceModel.swift in Sources */,
 				A299085A23F81DD100972C44 /* CustomTableViewCell.swift in Sources */,
 				A299084623F7FEFE00972C44 /* SceneDelegate.swift in Sources */,
