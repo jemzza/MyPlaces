@@ -240,6 +240,7 @@
                                             <outlet property="locationLabel" destination="y2l-u2-XLZ" id="rAy-Od-IiG"/>
                                             <outlet property="nameLabel" destination="B9C-t9-i0B" id="djo-d6-X5y"/>
                                             <outlet property="typeLabel" destination="Mp7-fG-QeV" id="oII-On-vcN"/>
+                                            <segue destination="NvZ-x2-W0q" kind="show" identifier="showDetail" id="fwT-cG-flz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -335,4 +336,7 @@
         <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="195" height="196"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fwT-cG-flz"/>
+    </inferredMetricsTieBreakers>
 </document>
