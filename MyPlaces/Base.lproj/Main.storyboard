@@ -150,7 +150,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F3e-zg-qxa" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F3e-zg-qxa" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
                                                     <rect key="frame" x="81" y="48" width="252" height="44"/>
                                                 </stackView>
                                             </subviews>
@@ -202,7 +202,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WyO-H9-rFQ">
-                                <rect key="frame" x="0.0" y="120" width="414" height="742"/>
+                                <rect key="frame" x="0.0" y="120" width="414" height="776"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="7JN-xL-Uas" customClass="CustomTableViewCell" customModule="MyPlaces" customModuleProvider="target">
@@ -280,7 +280,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="WyO-H9-rFQ" firstAttribute="trailing" secondItem="Sh5-aF-HgL" secondAttribute="trailing" id="S2N-Hx-YpL"/>
-                            <constraint firstItem="WyO-H9-rFQ" firstAttribute="bottom" secondItem="Sh5-aF-HgL" secondAttribute="bottom" id="Vdq-UI-8o4"/>
+                            <constraint firstItem="WyO-H9-rFQ" firstAttribute="bottom" secondItem="67v-C8-rav" secondAttribute="bottom" id="Vdq-UI-8o4"/>
                             <constraint firstItem="WyO-H9-rFQ" firstAttribute="top" secondItem="wcW-AP-Qd1" secondAttribute="bottom" constant="1" id="Z7s-dd-lIe"/>
                             <constraint firstItem="wcW-AP-Qd1" firstAttribute="trailing" secondItem="Sh5-aF-HgL" secondAttribute="trailing" id="ZRG-RV-o3Q"/>
                             <constraint firstItem="WyO-H9-rFQ" firstAttribute="leading" secondItem="Sh5-aF-HgL" secondAttribute="leading" id="fs2-Nc-tKx"/>
