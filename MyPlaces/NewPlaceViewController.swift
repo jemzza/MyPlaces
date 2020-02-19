@@ -73,18 +73,23 @@ class NewPlaceViewController: UITableViewController {
         if segue.identifier != "showMap" { return }
         
         let mapVC = segue.destination as! MapViewController
-        mapVC.place = currentPlace
+        mapVC.place.name = placeNameField.text!
+        mapVC.place.location = placeLocationField.text
+        mapVC.place.type = placeTypeField.text
+        mapVC.place.imageData = placeImage.image?.pngData()
     }
     
     func savePlace() {
         
-        var image: UIImage?
+//        var image: UIImage?
+//
+//        if imageIsChanged {
+//            image = placeImage.image
+//        } else {
+//            image = #imageLiteral(resourceName: "imagePlaceholder")
+//        }
         
-        if imageIsChanged {
-            image = placeImage.image
-        } else {
-            image = #imageLiteral(resourceName: "imagePlaceholder")
-        }
+        let image = imageIsChanged ? placeImage.image : #imageLiteral(resourceName: "imagePlaceholder")
         
         let imageData = image?.pngData()
         
