@@ -27,7 +27,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="nm9-Ee-Egb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250.00000000000006"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -251,9 +251,12 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wcW-AP-Qd1">
                                 <rect key="frame" x="0.0" y="44" width="375" height="32"/>
                                 <segments>
-                                    <segment title="First"/>
+                                    <segment title="Date"/>
                                     <segment title="Name"/>
                                 </segments>
+                                <connections>
+                                    <action selector="sortSelection:" destination="zNj-fK-TA1" eventType="valueChanged" id="1iB-Ct-H5g"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -269,13 +272,22 @@
                         <viewLayoutGuide key="safeArea" id="Sh5-aF-HgL"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="nzo-AB-DjV">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="Ytk-rj-gP9"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="Ytk-rj-gP9">
+                            <connections>
+                                <action selector="reversedSorting:" destination="zNj-fK-TA1" id="Djp-yW-LGn"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7FO-25-i9d">
                             <connections>
                                 <segue destination="0Tm-XO-hYY" kind="presentation" modalPresentationStyle="fullScreen" id="YT0-wH-876"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="reversedSortingButton" destination="Ytk-rj-gP9" id="gFL-Xh-Dbf"/>
+                        <outlet property="segmentedControl" destination="wcW-AP-Qd1" id="f2N-3J-A1D"/>
+                        <outlet property="tableView" destination="WyO-H9-rFQ" id="Yrw-Lu-rzf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ab7-hA-lZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
