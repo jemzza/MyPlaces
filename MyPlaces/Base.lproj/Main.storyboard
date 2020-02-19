@@ -221,32 +221,41 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="QLF-yF-FH6">
-                                                    <rect key="frame" x="96" y="8" width="302" height="69"/>
+                                                    <rect key="frame" x="96" y="8" width="210" height="69"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9C-t9-i0B">
-                                                            <rect key="frame" x="0.0" y="0.0" width="302" height="24.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="210" height="24.5"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lacation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2l-u2-XLZ">
-                                                            <rect key="frame" x="0.0" y="27.5" width="302" height="20"/>
+                                                            <rect key="frame" x="0.0" y="27.5" width="210" height="20"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mp7-fG-QeV">
-                                                            <rect key="frame" x="0.0" y="50.5" width="302" height="18.5"/>
+                                                            <rect key="frame" x="0.0" y="50.5" width="210" height="18.5"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="220" placeholderIntrinsicHeight="44" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="u3c-uG-Tef" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                    <rect key="frame" x="314" y="34.5" width="84" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="u3c-uG-Tef" secondAttribute="height" multiplier="21:4" id="AWc-a2-s7i"/>
+                                                        <constraint firstAttribute="width" constant="84" id="dcc-nh-f2l"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="u3c-uG-Tef" secondAttribute="trailing" constant="16" id="4XV-9h-bCn"/>
+                                                <constraint firstItem="u3c-uG-Tef" firstAttribute="leading" secondItem="QLF-yF-FH6" secondAttribute="trailing" constant="8" id="8dg-fq-eCW"/>
                                                 <constraint firstItem="QLF-yF-FH6" firstAttribute="top" secondItem="coI-Op-lSh" secondAttribute="top" constant="8" id="9Ej-Bs-ENz"/>
-                                                <constraint firstAttribute="trailing" secondItem="QLF-yF-FH6" secondAttribute="trailing" constant="16" id="b1p-cM-k0U"/>
+                                                <constraint firstItem="u3c-uG-Tef" firstAttribute="centerY" secondItem="coI-Op-lSh" secondAttribute="centerY" id="SL8-ID-lSW"/>
                                                 <constraint firstAttribute="bottom" secondItem="QLF-yF-FH6" secondAttribute="bottom" constant="8" id="b20-c0-7Qv"/>
                                                 <constraint firstItem="saB-sQ-8qG" firstAttribute="centerY" secondItem="coI-Op-lSh" secondAttribute="centerY" id="fBm-UU-GCw"/>
                                                 <constraint firstItem="QLF-yF-FH6" firstAttribute="leading" secondItem="saB-sQ-8qG" secondAttribute="trailing" constant="16" id="vID-Xb-24X"/>
@@ -257,6 +266,7 @@
                                             <outlet property="imageOfPlace" destination="saB-sQ-8qG" id="CiW-zh-1xn"/>
                                             <outlet property="locationLabel" destination="y2l-u2-XLZ" id="rAy-Od-IiG"/>
                                             <outlet property="nameLabel" destination="B9C-t9-i0B" id="djo-d6-X5y"/>
+                                            <outlet property="ratingControl" destination="u3c-uG-Tef" id="9W2-8S-ACp"/>
                                             <outlet property="typeLabel" destination="Mp7-fG-QeV" id="oII-On-vcN"/>
                                             <segue destination="NvZ-x2-W0q" kind="show" identifier="showDetail" id="fwT-cG-flz"/>
                                         </connections>
@@ -310,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ab7-hA-lZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77.599999999999994" y="-378.26086956521743"/>
+            <point key="canvasLocation" x="76.811594202898561" y="-378.34821428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="70E-gQ-Jf3">

@@ -60,6 +60,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.locationLabel.text = place.location
         cell.typeLabel.text = place.type
         cell.imageOfPlace.image = UIImage(data: place.imageData!)
+        cell.ratingControl.rating = Int(place.rating)
+        cell.ratingControl.isUserInteractionEnabled = false
 
         return cell
     }
