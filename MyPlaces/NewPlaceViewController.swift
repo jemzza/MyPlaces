@@ -74,6 +74,7 @@ class NewPlaceViewController: UITableViewController {
         guard let identifer = segue.identifier, let mapVC = segue.destination as? MapViewController else { return }
         
         mapVC.incomeSegueIdentifier = identifer
+        mapVC.mapViewControllerDelegate = self
         
         if identifer == "showPlace" {
             
@@ -189,4 +190,20 @@ extension NewPlaceViewController: UIImagePickerControllerDelegate, UINavigationC
         dismiss(animated: true, completion: nil)
     }
 }
+
+extension NewPlaceViewController: MapViewControllerDelegate {
+    
+    func getAddress(_ address: String?) {
+        placeLocationField.text = address
+    }
+}
+
+
+
+
+
+
+
+
+
 
