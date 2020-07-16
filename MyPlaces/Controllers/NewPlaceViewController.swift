@@ -28,6 +28,7 @@ class NewPlaceViewController: UITableViewController {
         saveButton.isEnabled = false
         placeNameField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         setupEditScreen()
+      
     }
 
     // MARK: Table view delegate
@@ -144,6 +145,7 @@ class NewPlaceViewController: UITableViewController {
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
+
     
 }
 

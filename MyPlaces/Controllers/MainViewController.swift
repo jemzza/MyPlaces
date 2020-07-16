@@ -146,14 +146,3 @@ extension MainViewController: UISearchResultsUpdating {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
