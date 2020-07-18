@@ -198,7 +198,7 @@ class MapManager {
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         
         alert.addAction(okAction)
-        
+      
         let alertWindow = UIWindow(frame: UIScreen.main.bounds)
         alertWindow.rootViewController = UIViewController()
         alertWindow.windowLevel = UIWindow.Level.alert + 1
